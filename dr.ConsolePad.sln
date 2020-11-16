@@ -3,6 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{15914B5B-5EBE-46D2-B4F5-AF67344851DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleScript", "Source\SampleScript\SampleScript.csproj", "{EBD200D8-B3AB-4A79-BE60-DB40515371B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dr.ConsolePad", "Source\dr.ConsolePad\dr.ConsolePad.csproj", "{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dr.ConsolePad.Tests", "Source\dr.ConsolePad.Tests\dr.ConsolePad.Tests.csproj", "{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +22,48 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Debug|x64.Build.0 = Debug|Any CPU
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Debug|x86.Build.0 = Debug|Any CPU
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Release|x64.ActiveCfg = Release|Any CPU
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Release|x64.Build.0 = Release|Any CPU
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Release|x86.ActiveCfg = Release|Any CPU
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9}.Release|x86.Build.0 = Release|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Debug|x64.Build.0 = Debug|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Debug|x86.Build.0 = Debug|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Release|x64.ActiveCfg = Release|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Release|x64.Build.0 = Release|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D}.Release|x86.Build.0 = Release|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Debug|x64.Build.0 = Debug|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Debug|x86.Build.0 = Debug|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Release|x64.ActiveCfg = Release|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Release|x64.Build.0 = Release|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Release|x86.ActiveCfg = Release|Any CPU
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EBD200D8-B3AB-4A79-BE60-DB40515371B9} = {15914B5B-5EBE-46D2-B4F5-AF67344851DA}
+		{0B4A06B7-35A2-4F2B-8047-3B74DE207D5D} = {15914B5B-5EBE-46D2-B4F5-AF67344851DA}
+		{9EDBD0FA-469B-4C2B-9BEE-164B84809F36} = {15914B5B-5EBE-46D2-B4F5-AF67344851DA}
 	EndGlobalSection
 EndGlobal
