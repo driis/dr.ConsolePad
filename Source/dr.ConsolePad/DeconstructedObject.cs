@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace dr.ConsolePad
 {
     public class DeconstructedObject
@@ -5,6 +7,9 @@ namespace dr.ConsolePad
         public object Original { get; }
         public TypeDescriptor Type { get; }
 
+        public string[] ColumnNames => Type.Properties.Select(x => x.Name).ToArray();
+        public object[] Values => Type.Properties.Select(x => x.GetFrom(Original)).ToArray();
+        
         private DeconstructedObject(object original, TypeDescriptor type)
         {
             Original = original;

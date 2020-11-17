@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
 
 namespace dr.ConsolePad
@@ -9,6 +10,8 @@ namespace dr.ConsolePad
     {
         [ThreadStatic]
         private static Dictionary<Type, TypeDescriptor>? _typeDescriptors;
+
+        private static readonly Type ObjectType = typeof(object);
 
         public static TypeDescriptor Describe(Type t)
         {
@@ -34,7 +37,12 @@ namespace dr.ConsolePad
         private static Func<object, object> GetFunc(PropertyInfo property)
         {
             var method = property.GetMethod!;
-            return method.CreateDelegate<Func<object, object>>();
+            var objectParameter = Expression.Parameter(ObjectType, "o");
+            var parameterCastToType = Expression.Convert(objectParameter, property.DeclaringType!);
+            var propertyGet = Expression.Property(parameterCastToType, method);
+            var body = Expression.Convert(propertyGet, ObjectType);
+            var lambda = Expression.Lambda<Func<object,object>>(body, objectParameter);
+            return lambda.Compile();
         }
         
         public TypeDescriptor(Type originalType, IReadOnlyCollection<LightweightProperty> properties)

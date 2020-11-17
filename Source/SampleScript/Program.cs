@@ -1,13 +1,14 @@
 ﻿using static System.Console;
 using dr.ConsolePad;
+using System.Collections.Generic;
 
-WriteLine("Hello, World");
-
-Person alice = new Person("Alice", "Petersen"){    
-    Age = 29
-};
+Person alice = new Person("Alice", "Petersen"){ Age = 29 };
+Person bob = new Person("Bob", "Johnson"){ Age = 42};
 
 alice.Dump();
+
+IEnumerable<Person> persons = new [] {alice,bob};
+persons.Dump();
 
 record Person 
 {

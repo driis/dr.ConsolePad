@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using ConsoleTables;
 using static System.Console;
 
@@ -6,15 +8,38 @@ namespace dr.ConsolePad
 {
     public static class ConsoleExtensions
     {
-        public static void Dump<T>(this IEnumerable<T> rows, string title = null)
+        public static void Dump<T>(T[] x)
         {
-            
+            Dump<T>((IEnumerable<T>)x);
+        }
+        public static IEnumerable<T> Dump<T>(this IEnumerable<T> rows, string? title = null)
+        {
+            ConsoleTable? table = null;
+            var rowsArray = rows as T[] ?? rows.ToArray();
+            foreach (var o in rowsArray)
+            {
+                if (o == null)
+                    continue;
+                
+                var obj = DeconstructedObject.From(o);
+                if (table == null)
+                {
+                    table = new ConsoleTable(obj.ColumnNames);
+                }
+
+                table.AddRow(obj.Values);
+            }
+
+            return rowsArray;
         }
         
-        public static void Dump(this object? o, string? title = null)
+        public static T Dump<T>(this T o, string? title = null)
         {
             if (o == null)
-                return;
+            {
+                WriteLine("<null>");
+                return o;
+            }
 
             title ??= o.GetType().Name;
             var obj = DeconstructedObject.From(o);
@@ -26,6 +51,7 @@ namespace dr.ConsolePad
                 table.AddRow(p.Name, p.GetFrom(o));
             }
             table.Write();
+            return o;
         } 
     }
 }
