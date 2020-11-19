@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 Person alice = new Person("Alice", "Petersen"){ Age = 29 };
 Person bob = new Person("Bob", "Johnson"){ Age = 42};
-
+var persons = new [] {alice,bob};
+persons.Dump();
 alice.Dump();
 
-IEnumerable<Person> persons = new [] {alice,bob};
-persons.Dump();
+42.Dump("The answer to everything");
 
 record Person 
 {
