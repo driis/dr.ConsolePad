@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dr.ConsolePad", "Source\dr.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dr.ConsolePad.Tests", "Source\dr.ConsolePad.Tests\dr.ConsolePad.Tests.csproj", "{9EDBD0FA-469B-4C2B-9BEE-164B84809F36}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6B8BF3D7-E5A4-4AE9-97C6-57A9C76AB51A}"
+ProjectSection(SolutionItems) = preProject
+	README.md = README.md
+EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
